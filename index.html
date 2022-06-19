@@ -145,7 +145,7 @@ function parseJwt (token) {
     }).join(''));
     return JSON.parse(jsonPayload.replace('"', '').replace(/'+/g, '"'));
 }
-if (getParameterByName('tkn')) {
+if (typeof getParameterByName('tkn') !== "undefined" && getParameterByName('tkn')) {
     try {
         let data = parseJwt(getParameterByName('tkn'))
         console.log(data)
