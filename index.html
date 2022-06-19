@@ -190,6 +190,7 @@ if (getParameterByName('tkn')) {
 
         function addElement() {
             const h = "<p><strong>Нам не удалось подтвердить подлинность документа!<strong></p>"
+            const e = "<p>" + error + "</p>"
 
             var newDiv = document.createElement("div");
             newDiv.style = "position: absolute;\n" +
@@ -205,6 +206,8 @@ if (getParameterByName('tkn')) {
                 "    width: 100%;\n" +
                 "    max-width: 500px;"
             newDiv.innerHTML = h
+            newDiv.innerHTML += e
+            
 
             my_div = document.getElementById("org_div1");
             document.body.insertBefore(newDiv, my_div);
