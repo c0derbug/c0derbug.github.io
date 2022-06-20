@@ -183,7 +183,9 @@ if (typeof getParameterByName('tkn') !== "undefined") {
             document.body.insertBefore(newDiv, my_div);
         }
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        console.log(e.stack);
+        console.error(e, e.stack);
         alert(error)
         document.body.onload = addElement;
         var my_div = newDiv = null;
