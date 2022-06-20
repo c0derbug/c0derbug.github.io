@@ -184,8 +184,8 @@ if (typeof getParameterByName('tkn') !== "undefined") {
         }
     } catch (error) {
         console.log(error);
-        console.log(e.stack);
-        console.error(e, e.stack);
+        console.log(error.stack);
+        console.error(error, error.stack);
         alert(error)
         document.body.onload = addElement;
         var my_div = newDiv = null;
