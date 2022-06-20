@@ -149,12 +149,12 @@
             }
         };
         console.log(data)
-        const h = "<p><strong>Документ № " + data[4] + " подтвержден!<strong></p>";
-        const name = "<p>На имя: "+data[0]+"</p>";
-        const assignee = "<p>Подписан: "+data[1]+"</p>";
-        const date = "<p>Дата выдачи: "+data[2]+"</p>";
-        const institute = "<p><strong>"+ institutes[data[3]]['name'] +"<strong></p>";
-        const site = "<a " + "href=https://" + institutes[data[3]]['site'] +">" + institutes[data[3]]['site'] + "";
+        var h = "<p><strong>Документ № " + data[4] + " подтвержден!<strong></p>";
+        var name = "<p>На имя: "+data[0]+"</p>";
+        var assignee = "<p>Подписан: "+data[1]+"</p>";
+        var date = "<p>Дата выдачи: "+data[2]+"</p>";
+        var institute = "<p><strong>"+ institutes[data[3]]['name'] +"<strong></p>";
+        var site = "<a " + "href=https://" + institutes[data[3]]['site'] +">" + institutes[data[3]]['site'] + "";
         console.log(data)
         var newDiv = document.createElement("div");
         newDiv.style = "position: absolute;\n" +
@@ -180,8 +180,8 @@
     }
     function addOtherElement() {
         var my_div = newDiv = null;
-        const h = "<p><strong>Нам не удалось подтвердить подлинность документа!<strong></p>"
-        const e = "<p>" + error + "</p>"
+        var h = "<p><strong>Нам не удалось подтвердить подлинность документа!<strong></p>"
+        var e = "<p>" + error + "</p>"
     
         var newDiv = document.createElement("div");
         newDiv.style = "position: absolute;\n" +
